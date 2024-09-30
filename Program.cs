@@ -256,7 +256,7 @@ namespace UserMenuApp
             }
             Console.WriteLine($"{amount} {unitInput} is equal to {convertedAmount} {unitOuput}");
         }
-//temper conversion code 
+//temperature conversion code 
         static void ConvertTemperature()
         {
             Console.Clear();
@@ -290,77 +290,98 @@ namespace UserMenuApp
 
             Console.WriteLine($"{amount} {unitInput} is equal to {convertedAmount} {unitOutput}");
         }
-
+//rock classification code
         static void RockClassification()
+{
         {
             Console.Clear();
             Console.WriteLine("Rock Classification");
 
-            /*
-            double pointTotal = 0;
-            double pointsBuffed = 0;
+            
+            double totalPoints = 0;
+            double buffedPoints = 0;
 
-            Console.Writeline("Enter the number of identical rock samples found: ");
-            int identicalSamples = int.Parse(Console.Readline()); 
-            pointTotal += identicalSamples * 4.5;
+            Console.WriteLine("Enter the number of identical rock samples found: ");
+            int identicalSamples = int.Parse(Console.ReadLine()); 
+            totalPoints += identicalSamples * 4.5;
 
-            Console.Writeline("Would you like the rock to be transported?: ");
-            string transport = Console.Readline().ToLower();
-            if (transport == "yes" && "y")
+            Console.WriteLine("Would you like the rock to be transported?: ");
+            string transport = Console.ReadLine().ToLower();
+            if (transport == "yes")
             {
-                pointTotal += 7.3;
-            }else{
-                break;
-
+                totalPoints += 7.3; 
             }
-            Console.Writeline("What is the the surface temperature of the rock (in degrees)?: ");
-            double temperature = double.Parse(Console.Readline());
+            if (transport == "no")
+            {
+               totalPoints += 0;
+            }
+            Console.WriteLine("What is the the surface temperature of the rock (in degrees)?: ");
+            double temperature = double.Parse(Console.ReadLine());
             if (temperature <= 0)
             {
-                pointTotal += 9.2;
+                totalPoints += 9.2;
             }
-            Console.Writeline("What is the total weight of the sample(s)(in kilograms)?: ");
-            double weightTotal = double.Parse(Console.Readline());
+            Console.WriteLine("What is the total weight of the sample(s)(in kilograms)?: ");
+            double weightTotal = double.Parse(Console.ReadLine());
             if(weightTotal > 25)
             {
-                pointTotal *= 1.17; // adding 17% increase
+                totalPoints *= 1.17; // adding 17% increase
             }
-            Console.Writline("Total Points: {pointTotal}");
+            Console.WriteLine($"Total Points: {totalPoints}");
 
             //buff/debuff the score
-
-            while(true)
+            while (true)
             {
-                Console.Writeline("Would you like to adjust the resulting total points?");
-                string pointAdjust = console.Readline().ToLower();
-                if (pointAdjust == "no" && "n")
+                Console.WriteLine("Would you like to adjust the resulting total points? (yes/no): ");
+                string pointAdjust = Console.ReadLine().ToLower();
+                if (pointAdjust == "no")
                 {
-                    break;
+                break;
                 }
-                if (pointAdjust == "yes" && "y")
+                if (pointAdjust == "yes")
                 {
-                    Console.Writeline("Increase or Decrease?: ");
-                    switch(adjustment)
-                    {
-                        case "Increase":
-                        Console.Writeline("By how much: ");
-                        double adjustmentAmount = double.Parse(Console.Readline());
-                        
+                     Console.WriteLine("Increase or Decrease?: ");
+                     string adjustment = Console.ReadLine().ToLower();
+                     double adjustmentAmount;
+                     switch (adjustment)
+                     {
+                        case "increase":
+                        Console.WriteLine("By how much: ");
+                        adjustmentAmount = double.Parse(Console.ReadLine());
+                        if (adjustmentAmount > totalPoints)
+                        {
+                            Console.WriteLine("Error: Adjustment amount is greater than the original point value. Please try again.");
+                        }
+                        else
+                         {
+                            totalPoints += adjustmentAmount;
+                            buffedPoints += adjustmentAmount;
+                            Console.WriteLine($"Updated point value: {totalPoints}");
+                            Console.WriteLine($"Total amount increased/decreased: {buffedPoints}");
+                            }
                         break;
-                        case "Decrease":
-                        Console.Writeline("By how much: ");
-                        double adjustmentAmount = double.Parse(Console.Readline());
-                        break;
-
-                    }
-
-                
+                         case "decrease":
+                          Console.WriteLine("By how much: ");
+                          adjustmentAmount = double.Parse(Console.ReadLine());
+                          if (adjustmentAmount > totalPoints)
+                          {
+                            Console.WriteLine("Error: Adjustment amount is greater than the original point value. Please try again.");
+                            }
+                         else
+                         {
+                            totalPoints -= adjustmentAmount;
+                            buffedPoints -= adjustmentAmount;
+                            Console.WriteLine($"Updated point value: {totalPoints}");
+                            Console.WriteLine($"Total amount increased/decreased: {buffedPoints}");
+                            }
+                            break;
+                            default:
+                            Console.WriteLine("Invalid input. Please enter 'increase' or 'decrease'.");
+                            break;
+                             }
+                     }
                 }
             }
-            */
-            
-
-
         }
     }
 }
