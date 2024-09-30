@@ -175,7 +175,7 @@ namespace UserMenuApp
             string unitOuput = Console.ReadLine()?.ToLower();
 
             Console.WriteLine("Enter starting amount: ");
-            double amount = double.Parse(Console.Readline());
+            double amount = double.Parse(Console.ReadLine());
 
 
             double convertedAmount = 0;
@@ -197,7 +197,7 @@ namespace UserMenuApp
                     break;
 
                     case"pounds":
-                    convertedAmount = amount*2.2046
+                    convertedAmount = amount*2.2046;
                     break;
 
                     case "grams": 
@@ -228,11 +228,11 @@ namespace UserMenuApp
                 {//from pounds
                     case"grams": convertedAmount = amount * 453.592 ; 
                     break;
-                    case"kilograms": amount / 2.20462 ; 
+                    case"kilograms": convertedAmount = amount / 2.20462 ; 
                     break;
-                    case"ounces" : amount*16 ; 
+                    case"ounces" : convertedAmount = amount * 16 ; 
                     break;
-                    case"pounds": amount;
+                    case"pounds": convertedAmount = amount;
                     break; 
                 }
                 break;
@@ -240,16 +240,16 @@ namespace UserMenuApp
                 switch (unitInput)
                 {// from ounces
                     case "grams":
-                    convertedAmount = amount*28.3495
+                    convertedAmount = amount*28.3495;
                     break;
                     case "kilograms":
-                    convertedAmount = amount / 35.274
+                    convertedAmount = amount / 35.274;
                     break;
                     case "pounds":
-                    convertedAmount = amount /16
+                    convertedAmount = amount /16;
                     break;
                     case "ounces":
-                    convertedAmount = amount
+                    convertedAmount = amount;
                     break; 
                 }
                 break; 
@@ -295,7 +295,24 @@ namespace UserMenuApp
         {
             Console.Clear();
             Console.WriteLine("Rock Classification");
-            
+
+            /*
+            double pointTotal = 0;
+            double pointsBuffed = 0;
+
+            Console.Writeline("Enter the number of identical rock samples found: ");
+            int identicalSamples = int.Parse(Console.Readline()); 
+            pointTotal += identicalSamples * 4.5;
+
+            Console.Writeline("Would you like the rock to be transported?: ");
+            string transport = Console.Readline().ToLower();
+            if (transport == "yes" && "y")
+            {
+                pointTotal += 7.3;
+            }else{
+                break;
+
+            }
             Console.Writeline("What is the the surface temperature of the rock (in degrees)?: ");
             double temperature = double.Parse(Console.Readline());
             if (temperature <= 0)
@@ -340,6 +357,7 @@ namespace UserMenuApp
                 
                 }
             }
+            */
             
 
 
