@@ -1,0 +1,15 @@
+C:\Users\pappa\Documents\source\MIS_221\Workspace\MIS221-Workspace\bin\Debug\net9.0\MIS221-Workspace.exe
+C:\Users\pappa\Documents\source\MIS_221\Workspace\MIS221-Workspace\bin\Debug\net9.0\MIS221-Workspace.deps.json
+C:\Users\pappa\Documents\source\MIS_221\Workspace\MIS221-Workspace\bin\Debug\net9.0\MIS221-Workspace.runtimeconfig.json
+C:\Users\pappa\Documents\source\MIS_221\Workspace\MIS221-Workspace\bin\Debug\net9.0\MIS221-Workspace.dll
+C:\Users\pappa\Documents\source\MIS_221\Workspace\MIS221-Workspace\bin\Debug\net9.0\MIS221-Workspace.pdb
+C:\Users\pappa\Documents\source\MIS_221\Workspace\MIS221-Workspace\obj\Debug\net9.0\MIS221-Workspace.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pappa\Documents\source\MIS_221\Workspace\MIS221-Workspace\obj\Debug\net9.0\MIS221-Workspace.AssemblyInfoInputs.cache
+C:\Users\pappa\Documents\source\MIS_221\Workspace\MIS221-Workspace\obj\Debug\net9.0\MIS221-Workspace.AssemblyInfo.cs
+C:\Users\pappa\Documents\source\MIS_221\Workspace\MIS221-Workspace\obj\Debug\net9.0\MIS221-Workspace.csproj.CoreCompileInputs.cache
+C:\Users\pappa\Documents\source\MIS_221\Workspace\MIS221-Workspace\obj\Debug\net9.0\MIS221-Workspace.sourcelink.json
+C:\Users\pappa\Documents\source\MIS_221\Workspace\MIS221-Workspace\obj\Debug\net9.0\MIS221-Workspace.dll
+C:\Users\pappa\Documents\source\MIS_221\Workspace\MIS221-Workspace\obj\Debug\net9.0\refint\MIS221-Workspace.dll
+C:\Users\pappa\Documents\source\MIS_221\Workspace\MIS221-Workspace\obj\Debug\net9.0\MIS221-Workspace.pdb
+C:\Users\pappa\Documents\source\MIS_221\Workspace\MIS221-Workspace\obj\Debug\net9.0\MIS221-Workspace.genruntimeconfig.cache
+C:\Users\pappa\Documents\source\MIS_221\Workspace\MIS221-Workspace\obj\Debug\net9.0\ref\MIS221-Workspace.dll
