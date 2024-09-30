@@ -189,11 +189,11 @@ namespace UserMenuApp
                 switch(unitOuput)
                 {
                     case "kilograms":
-                    convertedAmount = amount/1000;
+                    convertedAmount = amount/1000 ;
                     break;
 
                     case"ounces":
-                    convertedAmount = amount*0.0353
+                    convertedAmount = amount*0.0353 ; 
                     break;
 
                     case"pounds":
@@ -210,13 +210,13 @@ namespace UserMenuApp
                 switch (unitOuput)
                 {
                     case "grams":
-                    convertedAmount = amount*1000
+                    convertedAmount = amount*1000 ; 
                     break;
                     case "ounces":
-                    convertedAmount = amount*35.274
+                    convertedAmount = amount*35.274 ; 
                     break; 
                     case"pounds":
-                    convertedAmount= amount*2.20462
+                    convertedAmount= amount*2.20462 ; 
                     break;
                     case "kilograms":
                     convertedAmount=amount;
@@ -226,13 +226,13 @@ namespace UserMenuApp
                 case "pounds":
                 switch(unitOuput)
                 {//from pounds
-                    case"grams": convertedAmount = amount * 453.592
+                    case"grams": convertedAmount = amount * 453.592 ; 
                     break;
-                    case"kilograms": amount / 2.20462
+                    case"kilograms": amount / 2.20462 ; 
                     break;
-                    case"ounces" : amount*16
+                    case"ounces" : amount*16 ; 
                     break;
-                    case"pounds": amount
+                    case"pounds": amount;
                     break; 
                 }
                 break;
@@ -296,22 +296,6 @@ namespace UserMenuApp
             Console.Clear();
             Console.WriteLine("Rock Classification");
             
-            double pointTotal = 0;
-            double pointsBuffed = 0;
-
-            Console.Writeline("Enter the number of identical rock samples found: ");
-            int identicalSamples = int.Parse(Console.Readline()); 
-            pointTotal += identicalSamples * 4.5;
-
-            Console.Writeline("Would you like the rock to be transported?: ");
-            string transport = Console.Readline().ToLower();
-            if (transport == "yes" && "y")
-            {
-                pointTotal += 7.3;
-            }else{
-                break;
-
-            }
             Console.Writeline("What is the the surface temperature of the rock (in degrees)?: ");
             double temperature = double.Parse(Console.Readline());
             if (temperature <= 0)
