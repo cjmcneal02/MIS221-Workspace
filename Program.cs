@@ -5,6 +5,7 @@ namespace UserMenuApp
 {
     class Program
     {
+//main menu
         static void Main(string[] args)
         {
             while (true)
@@ -37,7 +38,7 @@ namespace UserMenuApp
                 Console.ReadKey();
             }
         }
-
+//menu if conversion selected
         static void ConvertUnitsOfMeasure()
         {
             while (true)
@@ -73,7 +74,7 @@ namespace UserMenuApp
                 Console.ReadKey();
             }
         }
-
+//length conversion code
         static void ConvertLength()
         {
             Console.Clear();
@@ -161,7 +162,7 @@ namespace UserMenuApp
             Console.WriteLine($"{amount} {unitInput} is equal to {convertedAmount} {unitOutput}");
         }
 
-
+//mass conversion code
         static void ConvertMass()
         {
             Console.Clear();
@@ -255,7 +256,7 @@ namespace UserMenuApp
             }
             Console.WriteLine($"{amount} {unitInput} is equal to {convertedAmount} {unitOuput}");
         }
-
+//temper conversion code 
         static void ConvertTemperature()
         {
             Console.Clear();
@@ -294,8 +295,70 @@ namespace UserMenuApp
         {
             Console.Clear();
             Console.WriteLine("Rock Classification");
-            // Add your rock classification logic here
-            Console.WriteLine("Rock classification logic goes here.");
+            
+            double pointTotal = 0;
+            double pointsBuffed = 0;
+
+            Console.Writeline("Enter the number of identical rock samples found: ");
+            int identicalSamples = int.Parse(Console.Readline()); 
+            pointTotal += identicalSamples * 4.5;
+
+            Console.Writeline("Would you like the rock to be transported?: ");
+            string transport = Console.Readline().ToLower();
+            if (transport == "yes" && "y")
+            {
+                pointTotal += 7.3;
+            }else{
+                break;
+
+            }
+            Console.Writeline("What is the the surface temperature of the rock (in degrees)?: ");
+            double temperature = double.Parse(Console.Readline());
+            if (temperature <= 0)
+            {
+                pointTotal += 9.2;
+            }
+            Console.Writeline("What is the total weight of the sample(s)(in kilograms)?: ");
+            double weightTotal = double.Parse(Console.Readline());
+            if(weightTotal > 25)
+            {
+                pointTotal *= 1.17; // adding 17% increase
+            }
+            Console.Writline("Total Points: {pointTotal}");
+
+            //buff/debuff the score
+
+            while(true)
+            {
+                Console.Writeline("Would you like to adjust the resulting total points?");
+                string pointAdjust = console.Readline().ToLower();
+                if (pointAdjust == "no" && "n")
+                {
+                    break;
+                }
+                if (pointAdjust == "yes" && "y")
+                {
+                    Console.Writeline("Increase or Decrease?: ");
+                    switch(adjustment)
+                    {
+                        case "Increase":
+                        Console.Writeline("By how much: ");
+                        double adjustmentAmount = double.Parse(Console.Readline());
+                        
+                        break;
+                        case "Decrease":
+                        Console.Writeline("By how much: ");
+                        double adjustmentAmount = double.Parse(Console.Readline());
+                        break;
+
+                    }
+
+                
+                }
+            }
+            
+
+
         }
     }
 }
